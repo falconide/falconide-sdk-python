@@ -21,7 +21,6 @@ from falconideapiv10.falconideapiv_10_client import Falconideapiv10Client
 client = Falconideapiv10Client()
 email_client = client.email
 
-#data = ()
 data = { 
     'api_key' : 'yoursecretapikey',
     'recipients' : ['recipient1@example.com','recipient2@example.com'],
@@ -47,10 +46,10 @@ from falconideapiv10.falconideapiv_10_client import Falconideapiv10Client
 client = Falconideapiv10Client()
 email_client = client.email
 
-#data = ()
 data = {
     'api_key': 'yoursecretkey',
     'recipients': ['recipient1@example.com', 'recipient2@example.com'],
+    'recipients_cc' : ['recipient1@example.com','recipient2@example.com'],	
     'email_details': {
         'from': 'from@example.com',
         'subject': 'Hi [% NAME %], here is your account balance.',
@@ -60,19 +59,22 @@ data = {
     },
     'tags': 'AccountDeactivation, Verification',
     'X-APIHEADER': ['UserID1', 'UserID2'],
+    'X-APIHEADER_CC': ['UserID6', 'UserID7'],
     'settings': {
         'footer': true,
         'clicktrack': true,
         'opentrack': true,
         'unsubscribe': true,
-        'bcc': 'bcc@example.com'
+        'bcc': 'bcc@example.com',
+        'attachmentid': '1,2,3',
+        'template': '101',	
     },
     'attributes': {
         'NAME': ['NameOfRecipient1', 'NameOfRecipient2'],
         'ACCOUNT_BAL': ['100', '200']
     },
     'files': {
-        'example_attachment1.txt': '',
+        'example_attachment1.txt': '', # Get Binary content of file and encode by base64
         'example_attachment2.pdf': ''
     }
 } 
