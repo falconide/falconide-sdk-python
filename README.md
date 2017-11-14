@@ -7,7 +7,7 @@ This SDK uses the Requests library and will work for Python 2.6 — 3.5.
 INSTALLATION: 
 =============
 ```shell
-git clone https://github.com/falconide/falconide-sdk-python.git .
+git clone https://github.com/falconide/falconide-sdk-python.git
 cd falconide-sdk-python
 sudo pip install -r requirements.txt
 ```
@@ -61,10 +61,10 @@ data = {
     'X-APIHEADER': ['UserID1', 'UserID2'],
     'X-APIHEADER_CC': ['UserID6', 'UserID7'],
     'settings': {
-        'footer': true,
-        'clicktrack': true,
-        'opentrack': true,
-        'unsubscribe': true,
+        'footer': True,
+        'clicktrack': True,
+        'opentrack': True,
+        'unsubscribe': True,
         'bcc': 'bcc@example.com',
         'attachmentid': '1,2,3',
         'template': '101',	
